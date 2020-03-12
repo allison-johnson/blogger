@@ -1,0 +1,12 @@
+<h2><%= "Title: #{@blog.title}" %></h2>
+
+<div>
+<%= "Content: #{@blog.content}" %>
+</div>
+
+<div>
+<%= "Author's email: #{@blog.user.email}" %><br><br>
+
+<%= link_to "Edit Post", edit_blog_path(@blog) %><br><br>
+
+<%= link_to "Delete Post", @blog, method: :delete, data: { confirm: "Really?" } %>

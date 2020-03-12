@@ -1,0 +1,12 @@
+<nav>
+  <ul>
+    <% if !user_signed_in? #not signed in %>
+        <li><%= link_to "Sign Up", new_user_registration_path  %></li>
+        <li><%= link_to "Log In", new_user_session_path %></li>
+    <% else #signed in %>
+        <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Create a Blog", "#" %></li>
+        <li><%= link_to "View  Blogs", "#" %></li>
+    <% end %>
+  </ul>
+</nav>
